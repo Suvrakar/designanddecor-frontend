@@ -280,5 +280,10 @@ body {
     }
 }
 
+.modal-nav {
+    color: var(--DDSolid) !important;
+    background-color: var(--DDbackground) !important;
+}
+
 
 /*# sourceMappingURL=gallery.css.map */
