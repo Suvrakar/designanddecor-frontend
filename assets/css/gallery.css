@@ -15,7 +15,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    /* z-index: 100; */
     display: initial;
     background-color: violet;
     /* margin: auto;
@@ -294,3 +294,33 @@ body {
 
 
 /*# sourceMappingURL=gallery.css.map */
+
+
+/* zoom effect  */
+
+.abc {
+    /* width: 100%; */
+    /* height: auto; */
+    /* margin: 4% auto; */
+    /* box-shadow: -3px 5px 15px #000; */
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    background-color: khaki;
+}
+
+.modal-body {
+    padding: 0px;
+}
+
+.pos {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 100;
+}
