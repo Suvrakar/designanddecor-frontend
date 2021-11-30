@@ -29,8 +29,8 @@
                 <img src="/assets/images/DnDLogo.svg" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="mx-auto"></div>
@@ -60,8 +60,9 @@
 
 
     <!-- Gallery  -->
-    <div class="gallery mt-5">
-        <div class="img-w">
+    <div class="gallery mt-5" id="imgGallery">
+
+        <!-- <div class="img-w">
             <img src="/assets/images/3D/1.jpeg" alt="" />
         </div>
         <div class="img-w"><img src="/assets/images/3D/2.webp" alt="" /></div>
@@ -78,7 +79,7 @@
         <div class="img-w"><img src="/assets/images/Wari/Guest/received_4017314001689009.jpg" alt="" /></div>
         <div class="img-w"><img src="/assets/images/Wari/Kids Bed/received_1186409378532781.jpg" alt="" /></div>
         <div class="img-w"><img src="/assets/images/Wari/Kids Bed/received_1186409378532781.jpg" alt="" /></div>
-        <div class="img-w"><img src="/assets/images/Wari/Kids Bed/received_1186409378532781.jpg" alt="" /></div>
+        <div class="img-w"><img src="/assets/images/Wari/Kids Bed/received_1186409378532781.jpg" alt="" /></div> -->
 
 
     </div>
@@ -137,10 +138,10 @@
                             </div>
                             <div class="footer-social-icon">
                                 <span>Follow us</span>
-                                <a href="https://www.facebook.com/thedanddinterior/"><i
-										class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                <a href="https://www.facebook.com/thedanddinterior/"><i target="_blank"
+                                        class="fab fa-facebook-f facebook-bg"></i></a>
+                                <!-- <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a> -->
                             </div>
                         </div>
                     </div>
@@ -222,5 +223,57 @@
         }
     });
 </script> -->
+
+<script>
+    const picArray = [{
+            img: "/assets/images/3D/2.webp"
+        },
+
+        {
+            img: "/assets/images/3D/3.jpeg"
+
+        },
+
+        {
+            img: "/assets/images/3D/FB_IMG_1617292733985.jpg"
+        }
+    ];
+
+    const gallery = document.getElementById("imgGallery");
+
+
+    // for (var i = 0; i < picArray.length; i++) {
+    //     const image = document.createElement("img")
+    //     const imageContainer = document.createElement("div")
+    //     imageContainer.className = "img-w";
+    //     imageContainer.appendChild(image)
+    //     image.src = picArray[i].img;
+    //     gallery.appendChild(imageContainer)
+    // }
+
+    picArray.map(x => {
+        const image = document.createElement("img")
+        const imageContainer = document.createElement("div")
+        imageContainer.className = "img-w";
+        imageContainer.appendChild(image)
+        image.src = x.img;
+        gallery.appendChild(imageContainer)
+    })
+
+
+    console.log(picArray.im);
+</script>
+
+
+
+<!-- MDBootstrap Masonry  -->
+<script type="text/javascript" src="js/addons/masonry.pkgd.min.js"></script>
+
+<script type="text/javascript" src="js/addons/imagesloaded.pkgd.min.js"></script>
+
+<!-- MDBootstrap Masonry  -->
+<script type="text/javascript" src="dist/js/addons/masonry.pkgd.min.js"></script>
+
+<script type="text/javascript" src="dist/js/addons/imagesloaded.pkgd.min.js"></script>
 
 </html>

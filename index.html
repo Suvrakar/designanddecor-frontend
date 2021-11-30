@@ -173,7 +173,7 @@
     <div class="container my-4 text-center">
         <h1 class="text-center">Our Services</h1>
         <div class="row">
-            <div class="col">
+            <div class="col backStyle">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAqx2YCz1_kqPazTYa-t62H9k4YqfBUhz4Ew&usqp=CAU" alt="">
                 <p>Interior</p>
             </div>
@@ -283,9 +283,9 @@
                             <div class="footer-social-icon">
                                 <span>Follow us</span>
                                 <a href="https://www.facebook.com/thedanddinterior/"><i
-                                        class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                    target="_blank" class="fab fa-facebook-f facebook-bg"></i></a>
+                                <!-- <a href="#"><i class="fab fa-twitter twitter-bg"></i></a> -->
+                                <!-- <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a> -->
                             </div>
                         </div>
                     </div>
@@ -339,7 +339,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog ">
+        <div class="modal-dialog wrapper">
             <div class="modal-content modal-background">
                 <div class="modal-header">
                     <h5 class="modal-title modal-background" id="exampleModalLabel">Subscribe to us</h5>
@@ -368,6 +368,27 @@
 
 
     <!-- JS -->
+
+    <!-- Cookie  -->
+    <script>
+        const cookieSetter = () => {
+            //setting cookie for 1 month, after one month it'll be expired automatically
+            document.cookie = "CookieBy=hivecore; max-age=" + 60 * 60 * 24 * 30;
+            if (document.cookie) { //if cookie is set
+                // cookieBox.classList.add("hide");
+                $(window).on('load', function() {
+                    $('#exampleModal').modal('show');
+                });
+                //hide cookie box
+            } else { //if cookie not set then alert an error
+                alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+            }
+        }
+    </script>
+
+
+
+
     <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
     <script type="text/javascript">
         var nav = document.querySelector('nav');
@@ -401,7 +422,13 @@
     <!-- popup  -->
     <script type="text/javascript">
         $(window).on('load', function() {
-            $('#exampleModal').modal('show');
+            let cookieIndex = document.cookie.indexOf("CookieBy=hivecore"); //checking our cookie
+            //if cookie is set then hide the cookie box else show it
+            if (cookieIndex === -1) {
+                $('#exampleModal').modal('show');
+            }
+
+
         });
     </script>
 
@@ -412,6 +439,7 @@
                 type: 'post',
                 data: $("#myForm").serializeArray(),
                 success: function() {
+                    cookieSetter();
                     alert("Form Data Submitted :)")
                 },
                 error: function() {
@@ -422,12 +450,18 @@
 
         }
 
+
+
+
         // function clearA() {
         //     const field = document.getElementById("emailId");
         //     field.value = "";
         //     console.log('triggered');
         // }
     </script>
+
+
+
 
 
 

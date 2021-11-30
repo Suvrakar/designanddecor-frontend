@@ -354,3 +354,35 @@ body {
     color: var(--DDbackground) !important;
     background-color: var(--DDSolid) !important;
 }
+
+.wrapper {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.wrapper.hide {
+    display: none;
+    /* visibility: hidden; */
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+    transform: scale(0.97);
+}
+
+.buttons .item {
+    margin: 0 10px;
+}
+
+.buttons a {
+    color: #FCBA7F;
+}
+
+.backStyle {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
