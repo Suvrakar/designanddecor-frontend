@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    border-radius: 0 !important;
 }
 
 html {
@@ -49,6 +50,15 @@ p {
     color: aliceblue;
 }
 
+
+/* iframe {
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    height: 60px;
+    width: 100%;
+} */
+
 body {
     position: relative;
     height: 100%;
@@ -94,16 +104,22 @@ body {
     object-fit: cover;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .nostyle {
     color: var(--DDSolid);
     background-color: var(--DDbackground);
+    text-decoration: none !important;
 }
 
 .nostyle a {
     text-decoration: none !important;
+    color: var(--DDSolid);
 }
 
-.nostyle:hover {
+.nostyle a:hover {
     color: var(--DDbackground);
     background-color: var(--DDSolid);
 }
@@ -385,4 +401,29 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     cursor: pointer;
+}
+
+.color {
+    color: var(--DDSolid) !important;
+    font-size: 15px;
+}
+
+.color:hover {
+    /* transform: scale(1.2); */
+}
+
+#overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.5) !important; */
+    /* Black background with opacity */
+    z-index: 100;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
 }
