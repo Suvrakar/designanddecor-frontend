@@ -1,5 +1,12 @@
-.customNav {
-    background-color: var(--DDbackground);
+* {
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+}
+
+html {
+    --DDbackground: #172F39;
+    --DDSolid: #D9CBC2;
 }
 
 .imgLogo img {
@@ -14,25 +21,10 @@
 
 html {
     font-size: 85%;
-    --DDbackground: #172F39;
-    --DDSolid: #D9CBC2;
 }
 
-a,
-h1,
-h5,
-p {
+h1 {
     color: var(--DDbackground);
-}
-
-h2::selection,
-label::selection,
-button::selection {
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .wrapper {
@@ -42,13 +34,14 @@ button::selection {
     /* box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.028), 0 0px 5.3px rgba(0, 0, 0, 0.04), 0 0px 10px rgba(0, 0, 0, 0.05), 0 0px 17.9px rgba(0, 0, 0, 0.06), 0 0px 33.4px rgba(0, 0, 0, 0.072), 0 0px 80px rgba(0, 0, 0, 0.1); */
 }
 
-h2 {
+
+/* h2 {
     background: var(--DDbackground);
     color: var(--DDSolid);
     letter-spacing: 0.1rem;
     padding: 1rem;
     cursor: default;
-}
+} */
 
 form,
 input,
@@ -334,4 +327,13 @@ i {
         content: " ";
         height: 100%;
     }
+}
+
+.boldContent {
+    font-weight: 600;
+}
+
+.textBackground {
+    padding: 20px;
+    margin-top: 20px;
 }
