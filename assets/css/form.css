@@ -327,6 +327,10 @@ i {
         content: " ";
         height: 100%;
     }
+
+    .mquery{
+        width: 100% !important;
+    }
 }
 
 .boldContent {
