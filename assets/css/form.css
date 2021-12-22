@@ -331,6 +331,10 @@ i {
     .mquery{
         width: 100% !important;
     }
+    
+.mapDisplay{
+    overflow: hidden !important;
+}
 }
 
 .boldContent {

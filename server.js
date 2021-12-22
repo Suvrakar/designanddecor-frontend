@@ -1,10 +1,10 @@
 var nodemailer = require('nodemailer');
 var transport = nodemailer.createTransport({
-  host: "smtp.mailtrap.io",
-  port: 2525,
+  host: "mail.thedesignanddecor.org",
+  port: 465,  
   auth: {
-    user: "b6f56d6238fbfc",
-    pass: "b570aadd53fc9a"
+    user: "info@thedesignanddecor.org",
+    pass: "thedesignanddecor"
   }
 });
 
